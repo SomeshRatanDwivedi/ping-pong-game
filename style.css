@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.stick{
+    width: 300px;
+    height: 10px;
+    position: absolute;
+    background-color: white;
+}
+.top{
+    top: 0;
+}
+.down{
+    bottom: 0;
+}
+.boll{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    bottom: 10px;
+}
+.score-level{
+    width: 100%;
+    color: white;
+    text-align: center;
+}
