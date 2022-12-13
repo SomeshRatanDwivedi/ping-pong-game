@@ -86,7 +86,7 @@ function changPositionOfBall(){
   }
   if(vy>=innerHeight-21 || vy<=0){
     if(score>maxScore){
-      console.log(maxScoreUserInfo, maxScore)
+      maxScore=score
       saveDataInLocalStorage();
     }
     showMaxScore();
