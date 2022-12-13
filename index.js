@@ -14,6 +14,9 @@ let y = 1;
 var intervalId;
 let score = 0;
 var currentUserName = prompt("What is your name ?");
+var maxScoreUserInfo = JSON.parse(localStorage.getItem("maxScoreUserInfo"));
+var maxScorerName = maxScoreUserInfo ? maxScoreUserInfo.username : "";
+var maxScore = parseInt(maxScoreUserInfo ? maxScoreUserInfo.maxscore : 0);
 assignLeft();
 window.addEventListener("keydown", (keyinfo) => {
   if (keyinfo.key == "a") {
@@ -146,9 +149,9 @@ function saveDataInLocalStorage() {
   localStorage.setItem("maxScoreUserInfo", JSON.stringify(maxScoreUserInfo));
 }
 function showMaxScore() {
-  var maxScoreUserInfo = JSON.parse(localStorage.getItem("maxScoreUserInfo"));
-  var maxScorerName = maxScoreUserInfo ? maxScoreUserInfo.username : "";
-  var maxScore = parseInt(maxScoreUserInfo ? maxScoreUserInfo.maxscore : 0);
+ maxScoreUserInfo = JSON.parse(localStorage.getItem("maxScoreUserInfo"));
+ maxScorerName = maxScoreUserInfo ? maxScoreUserInfo.username : "";
+ maxScore = parseInt(maxScoreUserInfo ? maxScoreUserInfo.maxscore : 0);
   window.alert(`
     Your score - ${score} 
     Max score - ${maxScore}
